@@ -10,12 +10,14 @@
     $: updateGameStateBasedOnHealthStatus(healthStatus);
 
     function handleBagPunch() {
+        healthStatus = healthStatus - 10;
+
         if (healthStatus < 0) {
             alert('You already destroyed this punching bag!');
             healthStatus = 0;
         }
 
-        healthStatus = healthStatus - 10;
+        healthStatus = healthStatus;
     }
 
     function handleGameReset() {
