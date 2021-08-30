@@ -21,6 +21,7 @@
     }
 
     function handleGameReset() {
+        if (healthStatus === 100) return;
         healthStatus = 100;
         gameEnded = false;
         healthState = 'healthy';
